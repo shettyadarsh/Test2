@@ -9,9 +9,10 @@
 
   <script>
     function goToPage3() {
-      // Push Page 3 into history and go there
-      history.pushState({ page: 3 }, "Page 3", "https://test3-opal-pi.vercel.app/");
-      location.href = "https://test3-opal-pi.vercel.app/";
+      // Push dummy state to history (optional for behavior)
+      history.pushState({ page: 3 }, "Page 3", window.location.href);
+      // Navigate to Page 3
+      window.location.href = "https://test3-opal-pi.vercel.app/";
     }
   </script>
 </body>
