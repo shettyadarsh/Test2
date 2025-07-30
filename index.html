@@ -9,6 +9,14 @@
   <button onclick="goToPage3()">Go to Page 3</button>
 
   <script>
+    // Handle the case when coming back from Page 3
+    window.onpageshow = function(event) {
+      if (event.persisted) {
+        // Clear any duplicate history entries
+        history.replaceState(null, '', window.location.href);
+      }
+    };
+
     function goBack() {
       // Use browser's back navigation
       history.back();
