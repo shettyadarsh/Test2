@@ -5,13 +5,17 @@
 </head>
 <body>
   <h1>Page 2</h1>
+  <button onclick="goBack()">Go Back to Page 1</button>
   <button onclick="goToPage3()">Go to Page 3</button>
 
   <script>
+    function goBack() {
+      // Use browser's back navigation
+      history.back();
+    }
+
     function goToPage3() {
-      // Push dummy state to history (optional for behavior)
-      history.pushState({ page: 3 }, "Page 3", window.location.href);
-      // Navigate to Page 3
+      // Normal navigation to Page 3
       window.location.href = "https://test3-opal-pi.vercel.app/";
     }
   </script>
