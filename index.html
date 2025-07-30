@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page 2</title>
+</head>
+<body>
+  <h1>Page 2</h1>
+  <button onclick="goToPage3()">Go to Page 3</button>
+
+  <script>
+    function goToPage3() {
+      history.pushState({ page: 3 }, "Page 3", "/page3/");
+      location.href = "/page3/";
+    }
+  </script>
+</body>
+</html>
