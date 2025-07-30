@@ -9,6 +9,14 @@
   <button onclick="goToPage3()">Go to Page 3</button>
 
   <script>
+    // Check if we're coming from Page 3
+    window.onload = function() {
+      if (sessionStorage.getItem('fromPage3') === 'true') {
+        sessionStorage.removeItem('fromPage3');
+        window.location.replace("https://test1-ten-wine.vercel.app/");
+      }
+    };
+
     function goBack() {
       // Use browser's back navigation
       history.back();
